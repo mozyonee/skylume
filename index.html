@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyLume</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <main>
+        <section id="article">
+            <div class="left">
+                <nav>
+                    <a href="#article">Головна</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#prices">Ціни</a>
+                </nav>
+                <div class="controls">
+                    <div class="header">
+                        <h1>SkyLume</h1>
+                        <p>Сучасні натяжні стелі, які поєднують естетику, надійність і комфорт.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#prices">Розрахувати вартість</a>
+                        <a href="#order">Створити замовлення</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <nav>
+                    <a href="#order" id="order-btn">Замовлення</a>
+                </nav>
+                <ol>
+                    <li>Швидкий і чистий монтаж</li>
+                    <li>Енергоефективність і звукоізоляція</li>
+                    <li>Безпека та екологічність</li>
+                </ol>
+            </div>
+        </section>
+        <section id="gallery">
+            <h2>Наші роботи</h2>
+            <ul>
+                <li>
+                    <div><img src="img/img1.png" alt=""></div>
+                    <p>Натяжна стеля 1</p>
+                </li>
+                <li>
+                    <div><img src="img/img2.png" alt=""></div>
+                    <p>Натяжна стеля 2</p>
+                </li>
+                <li>
+                    <div><img src="img/img3.png" alt=""></div>
+                    <p>Натяжна стеля 3</p>
+                </li>
+            </ul>
+        </section>
+        <section id="prices">
+            <h2>Наші ціни</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Послуга</th>
+                        <th>Приблизна ціна</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Встановлення натяжної стелі</td>
+                        <td>1200 ₴ за квадратний метр</td>
+                    </tr>
+                    <tr>
+                        <td>Встановлення точок світла</td>
+                        <td>600 ₴ за точку</td>
+                    </tr>
+                    <tr>
+                        <td>Консультація з приводу дизайну</td>
+                        <td>6000 ₴ за годину</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="order">
+            <form action="src/handler.php" method="post" id="form">
+                <div class="calculator">
+                    <h2>Калькулятор цін</h2>
+                    <div class="fields">
+                        <input type="text" name="area" id="area" placeholder="Площа стелі (м²)" min="0">
+                        <input type="text" name="lights" id="lights" placeholder="Точок світла" min="0">
+                        <input type="text" name="consult" id="consult" placeholder="Годин консультації" min="0">
+                    </div>
+                    <p id="results">Орієнтовна вартість - 0 ₴</p>
+                </div>
+                <div class="application">
+                    <h2>Створити заявку</h2>
+                    <div class="fields">
+                        <input type="text" name="name" id="name" placeholder="Ім'я" maxlength="60">
+                        <input type="tel" name="phone" id="phone" placeholder="Телефон" minlength="19" required>
+                        <input type="text" name="message" id="message" placeholder="Повідомлення">
+                    </div>
+                    <button type="submit">Надіслати</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="contacts">
+            <div class="contact">
+                <span><img src="img/phone.svg" alt=""></span>
+                <div>
+                    <p>Телефон</p>
+                    <a id="number">+1 123 456 7890</a>
+                </div>
+            </div>
+            <div class="contact">
+                <span><img src="img/email.svg" alt=""></span>
+                <div>
+                    <p>Пошта</p>
+                    <a href="mailto:info@skylume.com">info@skylume.com</a>
+                </div>
+            </div>
+            <div class="contact">
+                <span><img src="img/address.svg" alt=""></span>
+                <div>
+                    <p>Адреса</p>
+                    <a id="address">123 Design Street, Interior City</a>
+                </div>
+            </div>
+        </div>
+        <p class="copy">© 2023 SkyLume Interior Designs. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="src/script.js"></script>
+</body>
+</html>
