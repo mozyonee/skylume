@@ -152,7 +152,6 @@ input[type=number] {
     background-color: #595944;
     padding: 15px 20px;
     border-radius: 100%;
-    
     counter-increment: link-counter;
     content: counter(link-counter);
     display: inline;
