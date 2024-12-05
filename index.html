@@ -6,6 +6,7 @@
     <title>SkyLume</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
     <link rel="stylesheet" href="src/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
     <main>
@@ -83,7 +84,7 @@
         <section id="order">
             <form action="src/handler.php" method="post" id="form">
                 <div class="calculator">
-                    <h2>Калькулятор цін</h2>
+                    <h2><span>Калькулятор цін</span></h2>
                     <div class="fields">
                         <input type="text" name="area" id="area" placeholder="Площа стелі (м²)" min="0">
                         <input type="text" name="lights" id="lights" placeholder="Точок світла" min="0">
@@ -105,26 +106,31 @@
     </main>
     <footer>
         <div id="contacts">
-            <div class="contact">
-                <span><img src="img/phone.svg" alt=""></span>
-                <div>
-                    <p>Телефон</p>
-                    <a id="number">+1 123 456 7890</a>
+            <h2>Контакти</h2>
+            <div class="list">
+                <hr>
+                <div class="contact">
+                    <span><img src="img/phone.svg" alt=""></span>
+                    <div>
+                        <p>Телефон</p>
+                        <a id="number">+38 012 345 6789</a>
+                    </div>
                 </div>
-            </div>
-            <div class="contact">
-                <span><img src="img/email.svg" alt=""></span>
-                <div>
-                    <p>Пошта</p>
-                    <a href="mailto:info@skylume.com">info@skylume.com</a>
+                <div class="contact">
+                    <span><img src="img/email.svg" alt=""></span>
+                    <div>
+                        <p>Пошта</p>
+                        <a href="mailto:info@skylume.com">info@skylume.com</a>
+                    </div>
                 </div>
-            </div>
-            <div class="contact">
-                <span><img src="img/address.svg" alt=""></span>
-                <div>
-                    <p>Адреса</p>
-                    <a id="address">123 Design Street, Interior City</a>
+                <div class="contact">
+                    <span><img src="img/address.svg" alt=""></span>
+                    <div>
+                        <p>Адреса</p>
+                        <a id="address">м. Вінниця, вул Дизайнерська, 10</a>
+                    </div>
                 </div>
+                <hr>
             </div>
         </div>
         <p class="copy">© 2023 SkyLume Interior Designs. All rights reserved.</p>

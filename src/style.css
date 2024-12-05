@@ -40,7 +40,7 @@ input[type=number] {
 #article {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .buttons a {
@@ -136,7 +136,7 @@ input[type=number] {
     display: flex;
     justify-content: space-evenly;
     position: relative;
-    top: 65%;
+    top: 55%;
 }
 
 .right ol li {
@@ -169,6 +169,10 @@ input[type=number] {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    overflow-x: scroll;
+    gap: 25px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 #gallery div {
@@ -272,10 +276,22 @@ footer {
 }
 
 #contacts {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 75px;
     text-align: left;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #323226;
+    padding: 0;
+}
+
+.list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .contact span {
@@ -301,4 +317,167 @@ footer {
 
 .contact a:hover {
     color: #93936C;
+}
+
+@media screen and (max-width: 1280px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+    #gallery p {
+        font-size: 12px;
+    }
+    input, .application button, #order p {
+        font-size: 14px;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+    .right ol {
+        flex-direction: column;
+        top: 0; 
+        justify-content: space-evenly;
+        flex: 1;
+    }
+
+    #gallery, #prices, #order, footer {
+        max-width: 1440px;
+        margin: auto;
+        padding: 25px 50px;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    tbody tr td:first-child, thead tr th:first-child {
+        text-align: left;
+    }
+    tbody tr td:last-child, thead tr th:last-child {
+        text-align: right;
+    }
+
+    .calculator h2 span {
+        display: none;
+    }
+    .calculator h2::after {
+        content: "Створити заявку";
+    }
+    .application h2 {
+        display: none;
+    }
+    form {
+        flex-direction: column;
+        gap: 25px;
+    }
+    #contacts {
+        margin-bottom: 50px;
+    }
+    #contacts h2 {
+        text-align: center;
+    }
+    .list {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact {
+        width: 100%;
+    }
+    .contact span {
+        display: none;
+    }
+    .contact div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact div a {
+        text-align: right;
+    }
+}
+@media screen and (min-width: 1280px) {
+    
+    #contacts h2, hr {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    nav {
+        display: none !important;
+    }
+    #article {
+        flex-direction: column;
+        background-image: url(../img/background.png);
+        background-repeat: no-repeat;
+        background-position: 50% 85%;
+        background-size: cover;
+        justify-content: flex-end;
+    }
+    .left {
+        background-color: #64634E;
+        border-radius: 50px;
+        margin: 50px;
+        margin-bottom: 20vw;
+        flex: 0;
+    }
+    .controls {
+        padding: 35px;
+        height: auto;
+    }
+    h1 {
+        margin-bottom: 10px;
+    }
+    .buttons a:first-child {
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .right {
+        border-radius: 50px 50px 0 0;
+        background-image: none;
+        background-color: #64634E;
+        padding: 50px;
+        flex: 0;
+    }
+    .right ol {
+        gap: 10px;
+    }
+    .right ol li {
+        background-color: #323226;
+        flex-direction: row;
+        border-radius: 50px;
+        color: white;
+        text-align: left;
+    }
+    
+    .right ol li::before {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 2px solid #323226;
+        text-shadow: none;
+        color: #323226;
+        background-color: white;
+        padding: 15px 20px;
+        border-radius: 100%;
+        counter-increment: link-counter;
+        content: counter(link-counter);
+        display: inline;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
 }
